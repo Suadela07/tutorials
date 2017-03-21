@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+@import url('ericreset.css');
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+    background-image: url("../images/gplaypattern.png");
+    width: 974px;
+    height: 4080px;
+}
+
+.desktop-comp {
+    background-image: url('../images/comp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1150px;
+    height: 849px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.desktop {
+  width: 930px;
+  height: 471px;
+}
+
+nav h1 {
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+nav {
+  position: relative;
+  float: left;
+  display: block;
+  background-color: #fc4f6a;
+  margin: 0px 40px;
+  width: 90%;
+  height: 64px;
+  z-index: 10;
+  top: 52px;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  float: left;
+  width: calc(100% / 3);
+  font-size: 16px;
+  color: white;
+  line-height: 64px;
+  top: 18px;
+  text-align: center;
+  list-style-type: none;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px black;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  width: 80%;
+}
+
+nav a:hover {
+  background-color: #fd9493;
+}
+
+nav li {
+  width: 66%;
+  margin-left: 189px;
+  margin-top: -18px;
+}
+
+.sticky {
+	background-color: #fc4f6a;
+  position: fixed;
+  float: left;
+  display: block;
+  width: 973px;
+  height: 50px;
+  margin: 0;
+  z-index: 9000;
+  top: 0;
+  left: 0;
+}
+
+.sticky a {
+	position: relative;
+  text-decoration: none;
+  float: left;
+  width: calc(100% / 3);
+  font-size: 16px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  list-style-type: none;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px black;
+  top: 50px;
+}
+
+.sticky ul {
+  list-style: none;
+  float: right;
+  width: 50%;
+}
+
+.sticky a:hover {
+	background-color: #fd9493;
+}
+
+.sticky h1 {
+  top: 13px;
+}
+
+.sticky li {
+  width: 90%;
+  margin-left: 45px;
+  margin-top: -50px;
+}
+
+.description {
+  position: relative;
+  top: 190px;
+  left: 180px;
+  font-size: 20px;
+  width: 600px;
+  text-align: justify;
+  background-color: #272822;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.description h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+article h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+article p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.html {
+  position: relative;
+  width: 830px;
+  top: 350px;
+  left: 70px;
+  font-size:  15px;
+}
+
+.css {
+  position: relative;
+  top: 400px;
+  left: 70px;
+  width: 830px;
+  font-size: 15px;
+}
+
+.javascript {
+  position: relative;
+  top: 450px;
+  left: 70px;
+  width: 830px;
+  font-size: 15px;
+}
+
+h1 span { 
+  margin-top: -50px;
+  padding-bottom: 50px; 
+  display: block; 
+}

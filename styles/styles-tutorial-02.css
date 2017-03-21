@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@import url('ericreset.css');
+
+* {
+    box-sizing: border-box;
+}
+
+.desktop-comp {
+    background-image: url('../images/comp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1150px;
+    height: 849px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.notepad {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 80px;
+}
+
+.element {
+	position: relative;
+    font-size: 30px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    font-size: 30px;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+article {
+    width: 620px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+}

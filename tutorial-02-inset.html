@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javaScript Tutorial Two</title>
+<link rel="stylesheet" type="text/css" href="styles/styles-tutorial-02.css">
+<link rel="stylesheet" type="text/css" href="styles/prismlight.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88014904-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<main class="screen">
+
+		<div class="notepad">
+			<span class="element"></span>
+		</div>
+
+	<article class="html">
+			
+				<h2>The HTML</h2>
+
+		<p>Start by laying out your body with a div where your typing animation will run. The span tag is where the actual text will type from the javaScript and can be positioned with CSS.</p>
+
+		<pre><code class="language-markup">
+&lt;body>
+
+&lt;main class="screen">
+
+		&lt;div class="notepad">
+			&lt;span class="element">&lt;/span>
+		&lt;/div>
+
+&lt;/main>
+
+&lt;/body>
+		</code></pre>
+	</article>
+
+	<article class="css">
+		
+		<h2>The CSS</h2>
+
+		<p>Style your page however you would like (add borders, background colors, margins, padding, font-size etc). If you would like the blinking cursor at the end of your text, add the following CSS.</p>
+
+		<pre><code class="language-css">
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    font-size: 30px;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+		</code></pre>
+	</article>
+
+	<article class="javascript">
+
+		<h2>The javaScript</h2>
+
+		<p>Add the jquery library</p>
+
+<pre><code class="language-markup">
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+&lt;/script>
+</code></pre>
+
+	<p>Then add the following code to your javaScript file. The sentences inside the 'strings' section can be changed to whatever sentences you would like, just be sure to add quotes around the sentences as you would want them typed out! You can also change the typeSpeed to make it faster or slower.</p>
+
+	<pre><code class="language-javascript">
+$(function(){
+    $(".element").typed({
+      strings: ["This is a typed text animation.", 
+    				"It's really cool!", 
+    				"Scroll down to learn how."],
+      typeSpeed: 5
+    });
+});
+	</code></pre>
+
+</main>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="scripts/typed.js"></script>
+<script src="scripts/prismlight.js"></script>
+<script src="scripts/tutorial-02-demo.js"></script>
+</body>
+</html>

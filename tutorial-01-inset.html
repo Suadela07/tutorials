@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javaScript Tutorial One</title>
+<link rel="stylesheet" type="text/css" href="styles/styles-tutorial-01.css">
+<link rel="stylesheet" type="text/css" href="styles/prism.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88014904-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body class="body-tut-01">
+
+	<header> 
+		<nav>
+			<h1> How To: Sticky Nav!</h1>
+		    <ul>
+					<li><a href="#link-html">HTML</a></li>
+					<li><a href="#link-css">CSS</a></li>
+					<li><a href="#link-javascript">JavaScript</a></li>
+		    </ul>
+	    </nav>
+	</header>
+
+<main class="main-tut-01">
+
+	<article class="description">
+		<h2>What is a sticky nav?</h2>
+			<p>Sticky, or fixed, navigation is basically a website menu that is locked into place so that it does not disappear when the user scrolls down the page; in other words, it is accessible from anywhere on the website without having to scroll.</p>
+	</article>
+
+	<article class="html">
+		<h1><span id="link-html" class="link-element">&nbsp;</span>The HTML </h1>
+		<p>Start by laying out the navigation menu in the header like this.</p>
+		<pre><code class="language-markup">
+&lt;body>
+	&lt;header> 
+		&lt;nav>
+			&lt;h1> How To: Sticky Nav!&lt;/h1>
+		    &lt;ul>
+				&lt;li>&lt;a href="#">HTML&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">CSS&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">JavaScript&lt;/a>&lt;/li>
+		    &lt;/ul>
+	    &lt;/nav>
+	&lt;/header>
+		</code></pre>
+	</article>
+
+	<article class="css">
+		<h1><span id="link-css" class="link-element">&nbsp;</span>The CSS</h1>
+		<p>Then style your main navigation (class="normal-nav") as well as adding styles for your sticky nav (class="sticky" which will be added by the javaScript in the next section)</p>
+		<pre><code class="language-css">
+nav h1 {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+	font-size: 25px;
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+nav {
+	position: relative;
+	top: 52px;
+	float: left;
+	display: block;
+	background-color: #88BBD6;
+	margin: 0px 40px;
+	width: 90%;
+	height: 64px;
+	z-index: 10;
+}
+
+nav a {
+	position: relative;
+	top: 18px;
+	text-decoration: none;
+	float: left;
+	width: calc(100% / 3);
+	font-size: 16px;
+	color: white;
+	line-height: 64px;
+	text-align: center;
+	list-style-type: none;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px black;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+	width: 80%;
+}
+
+nav a:hover {
+	background-color: #99D3DF;
+}
+
+nav li {
+	width: 66%;
+	margin-left: 189px;
+	margin-top: -18px;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0; 
+	background-color: #88BBD6;
+	float: left;
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	z-index: 9000;
+}
+
+.sticky a {
+	position: relative;
+	top: 50px;
+	text-decoration: none;
+	float: left;
+	width: calc(100% / 3);
+	font-size: 16px;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	list-style-type: none;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px black;
+}
+
+.sticky ul {
+	list-style: none;
+	float: right;
+	width: 50%; }
+
+.sticky a:hover {
+	background-color: #99D3DF;
+}
+
+.sticky h1 {
+	top: 13px;
+}
+
+.sticky li {
+	width: 90%;
+	margin-left: 45px;
+	margin-top: -50px;
+}
+</code></pre>
+</article>
+	
+<article class="javascript">
+	<h1><span id="link-javascript" class="link-element">&nbsp;</span>
+The javaScript</h1>
+	<p>Add the jquery library</p>
+<pre><code class="language-markup">
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">&lt;/script>
+
+</code></pre>
+	<p>Last is the javaScript which will add the class 'sticky' to your HTML when you scroll down from the top of the screen and become a fixed navigation bar</p>
+	<pre><code class="language-javascript">
+var $mainNav = $('nav');
+
+var mainNavTopPos = $mainNav.offset().top;
+
+$(window).scroll(function(){
+	
+	if($(window).scrollTop() > mainNavTopPos){
+
+		$mainNav.addClass('sticky');
+		
+	}else{
+
+		$mainNav.removeClass('sticky');
+	}
+});
+</code></pre>
+</article>
+
+
+	
+
+</main>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="scripts/tutorial-01-demo.js"></script>
+<script src="scripts/prism.js"></script>
+
+</body>
+</html>
